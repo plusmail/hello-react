@@ -1,17 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-
+import {App, AppClass} from './App';
+import MyComponent from "./MyComponent";
+//App 컴포너트
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+const noop = () => {};
+console.error = noop;
+console.warn = noop;
+root.render(
+    // <React.StrictMode>
+
+        <App/>
+    // </React.StrictMode>
+);
